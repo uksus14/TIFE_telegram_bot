@@ -1,9 +1,14 @@
+import setup
+setup.main()
 # Использование .env файлов в проекте с какими-либо паролями - хорошая практика
 # Таким образом никакие пароли не попадут в интернет
 import os
 from dotenv import load_dotenv
 load_dotenv()
 token = os.getenv("token")
+
+with open("requests.txt", "w") as file:
+    pass
 
 # простой эхо бот
 import telebot
